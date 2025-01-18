@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        body {
+            font-family: 'Lora', serif;
+        }
+        .menu-item, .menu-price {
+            font-family: 'Roboto Slab', serif;
+        }
+    </style>
+    
+    <title>Real Casino de Madrid</title>
+    <link rel="icon" href="../images/logos/logo_casino_dorado.webp" type="image/x-con">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!--CABEZERA-->
+    <header>
+        <div class="header-content">
+            <img src="../images/wallpaper/decoracion_izquierda.png" alt="Imagen izquierda" class="restaurant-img.left">
+            <h1>Restaurante Recoletos</h1>
+            <img src="../images/wallpaper/decoracion_derecha.png" alt="Imagen derecha" class="restaurant-img.right">
+        </div>
+        <img src="../images/wallpaper/decoracion.webp" alt="decoracion" class="decoration-img">
+
+        <div class="language-toggle">
+            <button id="btnEspañol" aria-label="Cambiar idioma a español" data-key="spanishBtn">Carta en Español</button>
+            <button id="btnIngles" aria-label="Switch language to English" data-key="englishBtn">Menu in English</button>
+        </div>
+    </header>
+    
+
+    <!-- Columna con botones de enlace -->
+    <nav>
+        <ul>
+            <li data-key="inicio_icono"><a href="#inicio"><img src="../images/icon/inicio.webp" alt="Inicio Icono" class="nav-icon">Inicio</a></li>
+            <li data-key="galeria_icono"><a href="#galeria"><img src="../images/icon/galeria.webp" alt="Galería Icono" class="nav-icon">Galería</a></li>
+            <li data-key="menu_icono"><a href="#menu"><img src="../images/icon/menu.webp" alt="Menú Icono" class="nav-icon">Menú</a></li>
+            <li data-key="contacto_icono"><a href="#contacto"><img src="../images/icon/agenda.webp" alt="Contacto Icono" class="nav-icon">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!--INICIO-->
+    <section id="inicio">
+        <h2 data-key="welcome">Bienvenidos a Recoletos</h2>
+        <p data-key="experience">Disfrute de una experiencia gastronómica única en un ambiente elegante y acogedor.</p>
+    </section>
+    
+
+    <!--Carrusel de imagenes de platos de comida-->
+    <section id="galeria">
+        <h2 data-key="galery">Galería</h2>
+        <p data-key="discoverFood">Descubre algunos de nuestros exquisitos platos.</p>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="../images/foodImages/1.webp" alt="Plato 1">
+                <img src="../images/foodImages/2.webp" alt="Plato 2">
+                <img src="../images/foodImages/3.webp" alt="Plato 3">
+                <img src="../images/foodImages/4.webp" alt="Plato 4">
+                <img src="../images/foodImages/5.webp" alt="Plato 5">
+                <img src="../images/foodImages/8.webp" alt="Plato 8">
+                <img src="../images/foodImages/9.webp" alt="Plato 9">
+                <img src="../images/foodImages/10.webp" alt="Plato 10">
+                <!--Duplicamos las imagenes para lograr el efecto de carrusel-->
+                <img src="../images/foodImages/1.webp" alt="Plato 1">
+                <img src="../images/foodImages/2.webp" alt="Plato 2">
+                <img src="../images/foodImages/3.webp" alt="Plato 3">
+                <img src="../images/foodImages/4.webp" alt="Plato 4">
+                <img src="../images/foodImages/5.webp" alt="Plato 5">
+                <img src="../images/foodImages/8.webp" alt="Plato 8">
+                <img src="../images/foodImages/9.webp" alt="Plato 9">
+                <img src="../images/foodImages/10.webp" alt="Plato 10">
+            </div>
+        </div>
+    </section>
+
+     <!--Menú-->   <!-- MODIFICAR ABSOLUTAMENTE TODA LA INFORMACIÓN-->
+     <section id="menu">
+        <h2 data-key="menu_titulo">Menú</h2>
+
+        <div class="menu-section">
+            <h3 data-key="primeros_platos">Primeros</h3>
+            <ul>
+                <li data-key="croquetas">
+                    Croquetas de jamón ibérico 
+                    <img src="../images/icon/gluten.webp" alt="Gluten" class="menu-icon">
+                    <img src="../images/icon/lacteos.webp" alt="Lácteos" class="menu-icon">
+                    <img src="../images/icon/huevo.webp" alt="Huevo" class="menu-icon">
+                </li>
+                <li data-key="esparragos">
+                    Espárragos blancos en vinagreta de navajas 
+                    <img src="../images/icon/crustaceos.webp" alt="Crustáceos" class="menu-icon">
+                </li>
+                <li data-key="pimientos">
+                    Pimientos del piquillo rellenos de morcilla 
+                    <img src="../images/icon/lacteos.webp" alt="Lácteos" class="menu-icon">
+                </li>
+                <li data-key="ensalada_Faisan">
+                    Ensalada de faisán en escabeche
+                </li>
+                <li data-key="patatas_revolconas">
+                    Patatas revolconas con torreznos
+                </li>
+                <li data-key="sopa_pescado">
+                    Sopa de pescado o marisco 
+                    <img src="../images/icon/pescado.webp" alt="Pescado" class="menu-icon">
+                    <img src="../images/icon/crustaceos.webp" alt="Crustáceos" class="menu-icon">
+                </li>
+            </ul>
+        </div>
+        
+        <div class="menu-section">
+            <h3 data-key="segundos_platos">Segundos</h3>
+            <ul>
+                <li data-key="bacalao">
+                    Bacalao à Brás 
+                    <img src="../images/icon/huevo.webp" alt="Huevo" class="menu-icon">
+               </li>
+                <li data-key="mero">
+                    Mero a la bilbaína
+                </li>
+                <li data-key="canelon_setas">
+                    Canelón de setas con bechamel de langostinos 
+                    <img src="../images/icon/gluten.webp" alt="Gluten" class="menu-icon">
+                    <img src="../images/icon/huevo.webp" alt="Huevo" class="menu-icon">
+                    <img src="../images/icon/crustaceos.webp" alt="Crustáceos" class="menu-icon">
+                    <img src="../images/icon/lacteos.webp" alt="Lácteos" class="menu-icon">
+                </li>
+                <li data-key="terrina_codillo">
+                    Terrina de codillo de cerdo con lombarda
+                </li>
+                <li data-key="entrecot_cebon">
+                    Entrecot de cebón a la plancha
+                </li>
+                <li data-key="callos">
+                    Callos a la madrileña 
+                    <img src="../images/icon/gluten.webp" alt="Gluten" class="menu-icon">
+                </li>
+            </ul>
+        </div>
+    
+    
+        <div class="menu-section">
+            <h3 data-key="postres">Postres</h3>
+            <p data-key="postres_casa">Postres de la casa</p>
+        </div>
+    
+        <div class="menu-price">
+            <p data-key="precio_socio"><strong>Menú socio: 35,65 €</strong></p>
+            <p data-key="precio_invitado"><strong>Menú invitado: 40,00 €</strong></p>
+        </div>
+    
+        <div class="menu-wines">
+            <h2 data-key="vinos">Vinos</h2>
+            
+            <div class="wine-category">
+                <h4 data-key="vinos_blancos">Vinos Blancos</h4>
+                <ul>
+                    <li>Yllera Verdejo Vendimia Nocturna - 8,50 €</li> 
+                    <li>Ramón Do Casar Nobre 2022 - 35,00 €</li>
+                </ul>
+            </div>
+    
+            <div class="wine-category">
+                <h4 data-key="vinos_jovenes">Tintos Jóvenes</h4>
+                <ul>
+                    <li>Beronia Ecológico 2020 - 11,30 €</li>
+                </ul>
+            </div>
+    
+            <div class="wine-category">
+                <h4 data-key="tintos_crianza">Tintos Crianza</h4>
+                <ul>
+                    <li>Fariña Crianza 2019 - 16,70 €</li>
+                    <li>Nabal Crianza 2018 - 26,80 €</li>
+                </ul>
+            </div>
+    
+            <div class="wine-category">
+                <h4 data-key="tintos_reserva">Tintos Reserva</h4>
+                <ul>
+                    <li>1758 Selección Petit Verdot 2016 - 39,80 €</li>
+                    <li>Marqués de Riscal Reserva 2019 - 22,50 €</li>
+                    <li>Marqués de Vargas Selección Privada 2016 - 54,50 €</li>
+                </ul>
+            </div>
+    
+            <div class="wine-category">
+                <h4 data-key="espumosos">Espumosos</h4>
+                <ul>
+                    <li>Jaume Giró i Giró Grandalla Gran Reserva - 37,00 €</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="menu-night-service">
+            <p>
+                <strong data-key="servicio_noche">Servicio de la noche:</strong>
+                <span data-key="servicio_noche_detalle"> Medio menú (1 plato a elegir de toda la carta, bebida y postre) - 19 €</span>
+            </p>
+            <p>
+                <strong data-key="horario_reserva">Horario de reserva:</strong>
+                <span data-key="horario_reserva_detalle"> Almuerzo 14:00-15:00 / Cena 21:00-22:00</span>
+            </p>
+        </div>
+        
+    </section>
+
+    <!--Contacto del restaurante-->  
+    <section id="contacto">
+        <h2 data-key="titulo_contacto">Contacto</h2>
+        <p data-key="contacto_info">Las reservas se realizan a través de recepción al teléfono <strong>+34 915 21 87 00</strong></p>
+        <p data-key="horas_reservas">El restaurante abre de martes a sábado, y permanece cerrado los domingos y lunes.</p>
+    </section>
+
+    <!--Pie de la página-->   
+    <footer>
+        <p>&copy; 2024 Restaurante Recoletos</p>
+        <a href="https://www.casinodemadrid.es/casinoa/index.html" target="_blank">
+            <img src="../images/logos/logo_casino_dorado.webp" alt="Logo Real Casino de Madrid" >
+        </a>
+    </footer>
+
+    <!--Enlace a JavaScript-->  
+    <script src="../JavaScript/language.js"></script> <!--JS Idioma-->  
+    <script src="../JavaScript/carousel.js"></script> <!--JS Carrousel-->  
+</body>
+</html>
