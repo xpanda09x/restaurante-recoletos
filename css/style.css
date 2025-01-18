@@ -1,0 +1,416 @@
+/* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/wallpaper/fondo.png');
+    background-size: cover; /* Cubre todo el fondo sin distorsionar */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Para mantenerla fija cuando se hace scroll */
+    background-color: #f7f7f2;
+    color: #231F20;
+    min-height: 100vh; /* Ajusta el alto mínimo del cuerpo */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/*<-------------------------------------MOVIMIENTO BODY------------------------------------------>*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*<-------------------------------------HEADER------------------------------------------------->*/
+
+/* Cabecera ajustada sin posición fija */
+header {
+    background-color: #8A1C34;
+    color: #BDA55D;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Cambié el sticky a relative */
+}
+
+header img {
+    width: 10%; /* Esto hace que las imágenes se ajusten al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Contenedor del encabezado con las imágenes */
+.header-content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el título y las imágenes */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%;
+}
+
+/* Estilo del nombre del restaurante */
+header h1 {
+    color: #FFFFFF; /* Cambié el color a blanco para que contraste */
+    font-size: 3em; /* Aumenté el tamaño de la fuente */
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    
+}
+
+.decoration-img {
+    display: block; /* Separa la imagen en su propia línea */
+    margin: 0px auto; /* Reduce el margen superior e inferior para acercarla al texto */
+    width: 30%; /* Reduce el tamaño de la imagen */
+    max-width: 250px; /* Limita el ancho máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+/* Estilo de los botones de idioma */
+.language-toggle {
+    margin-top: 10px;
+}
+
+/*<-------------------------------------IMAGENES HEADER------------------------------------------------->*/
+
+/* Estilo para las imágenes del encabezado */
+.restaurant-img {
+    width: 30px; /* Ajusta el tamaño de las imágenes */
+    height: fit-content;
+    margin: 0 10px; /* Espacio entre las imágenes y el texto */
+}
+
+/* Alineación específica para la imagen izquierda */
+.restaurant-img.left {
+    order: 1; /* La imagen de la izquierda será primero */
+}
+
+/* Alineación específica para la imagen derecha */
+.restaurant-img.right{
+    order: 2; /* La imagen de la derecha será después */
+}
+
+/*<-------------------------------------TEXTO INICIO------------------------------------------------->*/
+
+#inicio p {
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
+}
+
+/*<--------------------------------------BOTONES IDIOMAS------------------------------------------------>*/
+
+.language-toggle button {
+    background-color: #231F20;
+    color: #FFFFFF;
+    border: 2px solid #BDA55D;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.language-toggle button:hover {
+    background-color: #BDA55D;
+    color: #231F20;
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el ratón */
+}
+
+/*<--------------------------------------MENU NAVEGACION------------------------------------------------>*/
+
+/* Estilo del menú de navegación */
+nav {
+    background-color: #8A1C34; /* Fondo rojo para el menú */
+    color: #FFFFFF;
+    padding: 10px 0; /* Ajuste del padding */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Asegura que el menú se mantenga centrado */
+}
+
+nav ul li {
+    display: inline-block; /* Asegura que los íconos y los textos estén uno al lado del otro */
+    margin: 10px 20px; /* Espacio entre los elementos */
+}
+
+nav ul li a {
+    display: flex; /* Usa flexbox para alinear el texto y el ícono */
+    align-items: center; /* Alinea verticalmente el texto con el ícono */
+    color: #BDA55D;
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px; /* Un poco de padding para que no quede todo pegado */
+}
+
+/* Estilo para los íconos */
+.nav-icon {
+    width: 25px; /* Tamaño del ícono */
+    height: 25px; /* Mantiene el tamaño proporcional */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle; /* Centra el ícono verticalmente */
+}
+
+/* Estilo para los enlaces al pasar el ratón */
+nav ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+
+
+/*<--------------------------------------CARRUSEL DE FOTOS------------------------------------------------>*/
+
+/* Estilo del carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    max-width: 2000px;
+    margin: 0 auto;
+    border: 4px solid #BDA55D; /* Marco dorado */
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 15s infinite linear; /* Ciclo infinito y animación más fluida */
+    width: 100%; /* Ancho total de todas las imágenes */
+}
+
+.carousel img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 1px solid #BDA55D;
+}
+
+#contacto p {
+    color: black; /* Cambia el color del texto normal a negro */
+}
+
+#contacto p strong {
+    color: #8A1C34; /* Mantén el texto dentro de <strong> en rojo */
+}
+
+
+
+/* Animación del carrusel (debería reiniciarse después de completar el ciclo) */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Mueve a la izquierda */
+    }
+}
+
+/*<---------------------------------------ESTILO DE SECCIONES----------------------------------------------->*/
+
+/* Centrado y estilo de las secciones */
+section {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%; /* Limita el ancho */
+}
+
+h1, h2 {
+    color: #A61325;
+    font-size: 30px; /* Aumenté el tamaño de la fuente */
+    font-weight: bold;
+}
+
+p {
+    font-weight: 300;
+}
+
+/*<---------------------------------------MENU DE COMIDA----------------------------------------------->*/
+
+/* Estilo de los elementos del menú */
+.menu-item {
+    background-color: #F9F9F9;
+    border: 2px solid #BDA55D;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    border-color: #A61325;
+    opacity: 1;
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+.menu-item:hover img {
+    opacity: 1;
+    left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Sección de Menú con listados visuales */
+#menu {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Estilo para los iconos de los alérgenos en el menú */
+.menu-icon {
+    width: 25px; /* Tamaño pequeño para los iconos */
+    height: 25px; /* Mantener proporciones */
+    margin-left: 5px; /* Espacio entre el texto y el icono */
+    vertical-align: middle; /* Alineación vertical de los iconos */
+}
+
+.menu-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F9F9F9;
+    border: 2px solid #BDA55D;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-section h3 {
+    font-size: 1.8em;
+    color: #8A1C34;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.menu-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu-section ul li {
+    font-size: 1.2em;
+    padding: 8px 0;
+    border-bottom: 1px solid #BDA55D;
+}
+
+.menu-section ul li:last-child {
+    border-bottom: none;
+}
+
+/*<---------------------------------------PRECIOS MENU----------------------------------------------->*/
+
+/* Precio del menú */
+.menu-price {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    background-color: #8A1C34;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/*<---------------------------------------MENU VINOS----------------------------------------------->*/
+
+/* Estilo para el título "Vinos" */
+.menu-wines h2 {
+    font-size: 2.5em; /* Aumenta el tamaño del título */
+    font-weight: bold;
+    color: #BDA55D; /* Un color dorado más intenso para hacer que resalte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Añade sombra al texto para más visibilidad */
+}
+
+/* Estilo para las líneas horizontales en los vinos */
+.wine-category ul li {
+    font-size: 1.2em;
+    padding: 8px 0;
+    border-bottom: 2px solid #BDA55D; /* Haz la línea más gruesa y con un color dorado */
+}
+
+/* Puedes agregar un borde o un fondo diferente para separar mejor las secciones */
+.wine-category h4 {
+    font-size: 1.5em;
+    color: #8A1C34; /* Mantén un color burdeos */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #BDA55D; /* Añade un borde dorado debajo para resaltar */
+}
+
+.wine-category ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.wine-category ul li {
+    font-size: 1.2em;
+    padding: 8px 0;
+    border-bottom: 1px solid #BDA55D;
+}
+
+.wine-category ul li:last-child {
+    border-bottom: none;
+}
+
+/*<---------------------------------------SERVICIO DE NOCHE----------------------------------------------->*/
+/* Estilo del servicio de la noche */
+.menu-night-service {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #8A1C34;
+}
+
+
+/*<---------------------------------------PIE DE PÁGINA----------------------------------------------->*/
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+footer img {
+    color: #BDA55D;
+    padding: 15px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+/*<----------------------------------------FONDO DE PANTALLA---------------------------------------------->*/
+
+@media (max-width: 768px) {
+    h1, h2, h3, h4 {
+        font-size: 20px; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('../images/wallpaper/fondo.png');
+        background-size: 200%; /* Cambia el tamaño de la imagen en pantallas pequeñas */
+        background-position: center center;
+    }
+}
