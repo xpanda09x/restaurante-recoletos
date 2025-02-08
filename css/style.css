@@ -23,7 +23,7 @@ html {
 
 /* Cabecera ajustada sin posición fija */
 header {
-    background-color: #8A1C34;
+    background-color: #6d192b;
     color: #BDA55D;
     padding: 20px;
     text-align: center;
@@ -114,7 +114,7 @@ header h1 {
 
 /* Estilo del menú de navegación */
 nav {
-    background-color: #8A1C34; /* Fondo rojo para el menú */
+    background-color:   #711f2e; /* Fondo rojo para el menú */
     color: #FFFFFF;
     padding: 10px 0; /* Ajuste del padding */
     text-align: center;
@@ -150,6 +150,7 @@ nav ul li a {
     vertical-align: middle; /* Centra el ícono verticalmente */
 }
 
+
 /* Estilo para los enlaces al pasar el ratón */
 nav ul li a:hover {
     color: #FFFFFF;
@@ -178,6 +179,7 @@ nav ul li a:hover {
     display: flex;
     animation: scroll 15s infinite linear; /* Ciclo infinito y animación más fluida */
     width: 100%; /* Ancho total de todas las imágenes */
+    transition: transform 1s ease-in-out;
 }
 
 .carousel img {
@@ -193,6 +195,27 @@ nav ul li a:hover {
 
 #contacto p strong {
     color: #8A1C34; /* Mantén el texto dentro de <strong> en rojo */
+}
+
+#contacto {
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+}
+
+.instagram-text {
+    font-size: 16px;
+    font-style: italic; /* Cursiva para un toque elegante */
+    color: #8A1C34; /* Rojo oscuro para un buen contraste y elegancia */
+    margin-bottom: 15px; /* Espacio entre el texto y el logo */
+}
+
+.instagram-link {
+    display: block; /* Hace que el enlace sea un bloque para que ocupe toda la línea */
+}
+
+.instagram-logo {
+    width: 30px; /* Tamaño pequeño para el logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin: 0 auto; /* Centra la imagen de forma horizontal */
 }
 
 
@@ -311,6 +334,56 @@ p {
 
 .menu-section ul li:last-child {
     border-bottom: none;
+}
+
+/*<---------------------------------------ICONOS ALIMENTARIOS----------------------------------------------->*/
+
+/* Estilo para los iconos alimentarios */
+#significado-iconos {
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Mantén el espacio entre iconos */
+    flex-wrap: wrap; /* Permite que los iconos se ajusten a nuevas filas si es necesario */
+    justify-content: space-evenly; /* Alinea los iconos de manera uniforme */
+    width: 100%; /* Toma todo el ancho disponible */
+    max-width: 900px; /* Puedes poner un límite de ancho si no quieres que ocupe toda la pantalla */
+}
+
+.icono-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.icono-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /* Añade algo de espacio entre los iconos */
+}
+
+.icono-item img {
+    width: 40px; /* Tamaño del icono */
+    height: 40px; /* Tamaño del icono */
+}
+
+.icono-item span {
+    margin-top: 5px; /* Espacio entre el icono y el texto */
+    font-size: 15px; /* Tamaño ajustado del texto */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida */
+    word-wrap: break-word; /* Permite el ajuste del texto largo */
+    display: block;
 }
 
 /*<---------------------------------------PRECIOS MENU----------------------------------------------->*/

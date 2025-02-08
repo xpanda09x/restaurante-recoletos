@@ -3,12 +3,13 @@ const translations = {
         // BOTONES
         spanishBtn: 'Carta en Español',
         englishBtn: 'Menu in English',
-        //ICONOS
+        // ICONOS
         inicio_icono: 'Inicio',
         galeria_icono: 'Galería',
         menu_icono: 'Menú',
+        vinos_icono: 'Vinos',
         contacto_icono: 'Contacto',
-        //TEXTO
+        // TEXTO
         welcome: 'Bienvenidos a Recoletos',
         experience: 'Disfrute de una experiencia gastronómica única en un ambiente elegante y acogedor.',
         galery: 'Galería',
@@ -33,6 +34,14 @@ const translations = {
         // POSTRES
         postres: 'Postres',
         postres_casa: 'Postres de la casa',
+        //CARACTERISTICAS ALIMENTARIAS
+        gluten: 'Gluten',
+        huevo: 'Huevo',
+        lacteos: 'Lácteos',
+        crustaceos: 'Crustáceos',
+        frutos_secos: 'Frutos Secos',
+        mostaza: 'Mostaza',
+        pescado: 'Pescado',
         //PRECIOS
         precio_socio: 'Menú socio: 35,65 €',
         precio_invitado: 'Menú invitado: 40,00 €',
@@ -56,12 +65,13 @@ const translations = {
         // BOTONES
         spanishBtn: 'Carta en Español',
         englishBtn: 'Menu in English',
-        //ICONOS
+        // ICONOS
         inicio_icono: 'Home',
         galeria_icono: 'Gallery',
         menu_icono: 'Menu',
+        vinos_icono: 'Wines',
         contacto_icono: 'Contact',
-        //TEXTO
+        // TEXTO
         welcome: 'Welcome to Recoletos',
         experience: 'Enjoy a unique gastronomic experience in an elegant and cozy atmosphere.',
         galery: 'Gallery',
@@ -86,6 +96,14 @@ const translations = {
         // POSTRES
         postres: 'Desserts',
         postres_casa: 'House desserts',
+        //CARACTERISTICAS ALIMENTARIAS
+        gluten: 'Gluten',
+        huevo: 'Egg',
+        lacteos: 'Milk',
+        crustaceos: 'Custaceans',
+        frutos_secos: 'Nuts',
+        mostaza: 'Mustard',
+        pescado: 'Fish',
         //PRECIOS
         precio_socio: 'Member Menu: 35.65 €',
         precio_invitado: 'Guest Menu: 40.00 €',
@@ -114,38 +132,33 @@ function translate(language) {
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         if (translations[language][key]) {
-            const linkText = element.querySelector('a');
-            if (linkText) {
-                linkText.childNodes[1].nodeValue = translations[language][key];
+            // Verificar si el elemento contiene hijos (como imágenes o enlaces)
+            if (element.children.length > 0) {
+                // Mover todos los nodos no textuales (como imágenes) al final
+                const iconNodes = Array.from(element.childNodes).filter(node => node.nodeType !== Node.TEXT_NODE);
+                const textNode = document.createTextNode(translations[language][key]);
+
+                // Limpiar el contenido actual y añadir el texto seguido de los iconos
+                element.innerHTML = '';
+                element.appendChild(textNode);
+                iconNodes.forEach(icon => element.appendChild(icon));
             } else {
+                // Si no tiene hijos, reemplazar directamente el texto
                 element.textContent = translations[language][key];
             }
         }
     });
 
-    // Actualizar los iconos del menú de navegación
-    updateMenuIcons(language);
+    // Actualización de los botones de cambio de idioma
+    document.getElementById('btnEspañol').textContent = translations[language].spanishBtn;
+    document.getElementById('btnIngles').textContent = translations[language].englishBtn;
 }
 
-// Función para actualizar los iconos alimentarios
-function updateMenuIcons(language) {
-    const menuIcons = document.querySelectorAll('.menu-icon');
 
-    menuIcons.forEach(icon => {
-        // Determinar qué atributo utilizar según el idioma seleccionado
-        const iconSrc = icon.getAttribute(`data-icono${language === 'es' ? 'Español' : 'Ingles'}`);
 
-        // Verificar que el atributo existe y actualizar la fuente del icono
-        if (iconSrc) {
-            icon.src = iconSrc;
-        }
-    });
-}
-
+// Función para cambiar el idioma
 function changeLanguage(language) {
-    // Cambiar el idioma de los textos
     translate(language);
-    // Actualizar el atributo "lang" de la página
     document.documentElement.lang = language;
 }
 
